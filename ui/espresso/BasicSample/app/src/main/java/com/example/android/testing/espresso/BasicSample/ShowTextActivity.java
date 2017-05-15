@@ -16,13 +16,13 @@
 
 package com.example.android.testing.espresso.BasicSample;
 
-import com.google.common.base.Strings;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.google.common.base.Strings;
 
 /**
  * A simple {@link Activity} that shows a message.
@@ -30,8 +30,7 @@ import android.widget.TextView;
 public class ShowTextActivity extends Activity {
 
     // The name of the extra data sent through an {@link Intent}.
-    public final static String KEY_EXTRA_MESSAGE =
-            "com.example.android.testing.espresso.basicsample.MESSAGE";
+    public final static String KEY_EXTRA_MESSAGE = "com.example.android.testing.espresso.basicsample.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +42,12 @@ public class ShowTextActivity extends Activity {
         String message = Strings.nullToEmpty(intent.getStringExtra(KEY_EXTRA_MESSAGE));
 
         // Show message.
-        ((TextView)findViewById(R.id.show_text_view)).setText(message);
+        ((TextView) findViewById(R.id.show_text_view)).setText(message);
     }
 
     /**
      * Creates an {@link Intent} for {@link ShowTextActivity} with the message to be displayed.
+     *
      * @param context the {@link Context} where the {@link Intent} will be used
      * @param message a {@link String} with text to be displayed
      * @return an {@link Intent} used to start {@link ShowTextActivity}
